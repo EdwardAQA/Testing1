@@ -5,7 +5,8 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import Select
 from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import NoAlertPresentException
-import unittest, time, re
+import unittest
+driver = webdriver.Firefox()
 
 class One(unittest.TestCase):
     def setUp(self):
@@ -27,8 +28,8 @@ class One(unittest.TestCase):
         driver.find_element_by_id("id_login_password").send_keys("2730443rusPERM")
         driver.find_element_by_xpath("//form[@id='login_form']/button").click()
         driver.find_element_by_xpath("//img[@alt='User avatar']").click()
-        driver.find_element_by_xpath("//ul[@id='ember531']/li[8]/button").click()
-        driver.find_element_by_xpath("//footer[@id='ember543']/button").click()
+        driver.find_element_by_xpath("//li[8]/button").click()
+        driver.find_element_by_xpath("//footer[1]/button[1]").click()
     
     def is_element_present(self, how, what):
         try: self.driver.find_element(by=how, value=what)
