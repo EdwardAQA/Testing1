@@ -73,7 +73,7 @@ try:
     driver.get("http://suninjuly.github.io/simple_form_find_task.html") #переходим на другую страницу
     elements1 = driver.find_elements_by_tag_name("input")  # ищем все элементы с тегом input
     for element1 in elements1:  # цикл для каждого элемента среди всх элементов
-        element1.send_keys("Хуй")  # ставим значение в скобках для элемента
+        element1.send_keys("Выключай порно")  # ставим значение в скобках для элемента
     assert len(elements1) == 4 #проверка на то, что количество найденныйх элементов переменной elements1 равно 4
     button = driver.find_element_by_xpath("//button[@type='submit']") #поиск эдемента с помощью Xpath селектора
     button.click()  # кликаем на найденный элемент

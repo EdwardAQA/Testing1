@@ -31,7 +31,7 @@ class Application:
 
     def open_autorisation(self):
         driver = self.driver
-        driver.find_element_by_id("ember235").click()
+        driver.find_element_by_link_text('Войти').click()
 
     def open_catalog_page(self):
         driver = self.driver
